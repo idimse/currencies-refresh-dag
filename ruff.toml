@@ -1,0 +1,23 @@
+# Ruff is equivalent to black but:
+# - faster
+# - better compatibility with pep-8 linter ecosystem
+# - allows customization.
+# For convenience set up your IDE to format on save with ruff.
+
+line-length = 120
+
+[lint]
+# Requires that imports are sorted and formatted.
+# Set up your IDE to sort imports with ruff, or isort with --profile=black.
+extend-select = ['I']
+
+[format]
+# Conform to "prioritize single quotes except in docstrings" style.
+# Examples:
+# some_string = 'abc'
+# some_dict = {'key': 'value', 'key2': some_string}
+# json_literal = '{"json": "abc"}'
+# json_f_string = f'{"json": "{some_string}"}'
+# json_literal_doc_string = """{"json": "{y}"}"""
+# json_doc_f_string = f"""{"json": "{some_string}"}"""
+quote-style = 'single'
