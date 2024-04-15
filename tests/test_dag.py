@@ -35,7 +35,6 @@ def test_non_existing_rates():
 
             result = connection.execute('SELECT * FROM display_rate')
             rows = result.fetchall()
-            print(rows)
 
             assert len(rows) == 0
 
@@ -63,7 +62,6 @@ def test_non_comparable_rates():
 
             result = connection.execute('SELECT * FROM display_rate')
             rows = result.fetchall()
-            print(rows)
 
             assert len(rows) == 3
             assert rows[0] == (1234561, 'AUD/USD', 0.85619, None)
@@ -112,7 +110,6 @@ def test_future_rates():
 
             result = connection.execute('SELECT * FROM display_rate')
             rows = result.fetchall()
-            print(rows)
 
             assert len(rows) == 3
             assert rows[0] == (1234564, 'AUD/GBP', 0.59642, None)
@@ -149,7 +146,6 @@ def test_some_test():
 
             result = connection.execute('SELECT * FROM display_rate')
             rows = result.fetchall()
-            print(rows)
 
             assert len(rows) == 3
             assert rows[0] == (1234561, 'AUD/USD', 0.85619, -1.111)
